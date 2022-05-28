@@ -10,3 +10,24 @@
 ### Решение:
 #### Для демонстрации решения необходимо запустить метод main() в классе Demo.
 #### Для проверки выброса ошибки при циклической зависимости файлов в файле Folder 1/File 1-1 нужно "раскомментировать" строку //require 'Folder 1/File 1-2' (удалить "//") и снова запустить приложение.
+
+## Задание №2
+#### Реализована серверная часть по технологии REST API на Spring Boot с СУБД PostgreSQL 13. 
+Перед запуском приложения изменить имя пользователя и пароль в файле task-second/server/src/main/resources/application.properties.
+Для запуска приложения запустить метод main в классе App.
+#### Протестировать приложение можно в Postman, используя запросы:
+#### GET http://localhost:8080/students - показать всех студентов.
+#### POST http://localhost:8080/students - добавить нового студента, передав данные в формате JSON.
+* пример:
+```json
+{
+    "firstName": "Ramsay",
+    "lastName": "Snow",
+    "middleName": "Roose",
+    "dateOfBirth": "1990-11-03",
+    "groupName": "group-2",
+    "studentNumber": "some-number-002"
+}
+```
+#### DELETE http://localhost:8080/students/{studentNumber} - удаление студента по его уникальному номеру.
+
